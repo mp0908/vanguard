@@ -182,7 +182,8 @@ button, input, select, textarea{ font: inherit; }
   height: 2px;
   background: #ff5b68;
 }
-h1{ font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: #fff; }
+h1{ font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: var(--text); }
+.hero h1{ color: #fff; }
 .hero .lead{ max-width: 52ch; color: rgba(255,255,255,0.82); font-size: 1.08rem; margin-inline: auto; }
 .hero-actions{ display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; justify-content: center; }
 .hero .btn-plain{ border-color: rgba(255,255,255,0.35); color: #fff; }
@@ -235,6 +236,76 @@ h1{ font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: #fff; }
 .legal-content a{ color: var(--red); text-decoration: underline; text-underline-offset: 2px; }
 .legal-content a:hover{ color: var(--red-dark); }
 .legal-content strong{ color: var(--text); }
+
+/* Projects / portfolio */
+.projects-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+.project-card{
+  flex: 1 1 480px;
+  max-width: 620px;
+}
+.browser-window{
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: 0 18px 40px -26px rgba(23,23,23,0.35);
+}
+.browser-bar{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.8rem;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--line);
+}
+.browser-dot{
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+  display: inline-block;
+}
+.browser-dot:nth-child(1){ background: #e6595f; }
+.browser-dot:nth-child(2){ background: #e8b342; }
+.browser-dot:nth-child(3){ background: #58b96a; }
+.browser-url{
+  margin-left: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.browser-frame{
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+  background: var(--bg-soft);
+}
+.project-info{ padding: 1.2rem 0.2rem 0; text-align: center; }
+.project-info h3{ font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.project-info p{ color: var(--muted); font-size: 0.94rem; margin-bottom: 0.9rem; }
+.github-cta{
+  text-align: center;
+  margin-top: 2.6rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid var(--line);
+}
+.github-cta p{ color: var(--muted); margin-bottom: 0.9rem; }
+@media (max-width: 640px){
+  .browser-frame{ height: 280px; }
+}
 
 /* Buttons */
 .btn{
